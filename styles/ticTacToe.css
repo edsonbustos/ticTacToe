@@ -1,31 +1,44 @@
 #body {
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    color:green;
+    color:chartreuse;
     background-color:black;
 }
 #principal {
     text-align: center;
+}
+#nombreDejuego{
+    color: chartreuse;
+}
+#modoJugador{
+    padding: 10px;
+    font-size: 13px;
+    background-color: green;
+    color: chartreuse;
+}
+#modoComputadora{
+    padding: 10px;
+    font-size: 13px;
+    background-color: green;
+    color: chartreuse;
 }
 #tabla {
     padding: 10px;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
-    gap: 5px;
+    gap: 5px;    
 }
 .celdas {
     color: white;
     font-size: 400%;
     background-color: green;
 }
-
 #reiniciar{
     padding: 10px;
     font-size: 25px;
     background-color: green;
-    color: black;
+    color:chartreuse;
 }
