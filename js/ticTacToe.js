@@ -3,20 +3,28 @@ const reiniciar = document.getElementById('reiniciar');
 const modoJugador = document.getElementById('modoJugador');
 const modoComputadora = document.getElementById('modoComputadora');
 const modoSeleccionado = document.getElementById('modoSeleccionado');
+const turnoIndicador = document.getElementById("turnoIndicador")
 
 let turno = "X"; 
 let pierde = false; 
 let juegoModo = "";
+
+//Indicador de turno.
+function actualizarIndicadorTurno() {
+    const turnoIndicador = document.getElementById('turnoIndicador');
+    turnoIndicador.textContent = `Sigue jugador: ${turno}`;
+}
 // Modos
 modoJugador.addEventListener("click", function() {
     juegoModo = "multijugador";
-    modoSeleccionado.textContent = "Jugador vs Jugador" ; 
+    modoSeleccionado.textContent = "Jugador vs Jugador"; 
     iniciarJuego();
 });
 modoComputadora.addEventListener("click", function() {
     juegoModo = "computadora";
     modoSeleccionado.textContent = "Jugador vs Computadora"; 
     iniciarJuego();
+    
 });
 function iniciarJuego() {
     pierde = false;
@@ -34,6 +42,7 @@ function iniciarJuego() {
                     computadora(); // La computadora juega
                 }
             }
+            actualizarIndicadorTurno();
         });
     }
 }
@@ -93,5 +102,7 @@ reiniciar.addEventListener("click", function() {
     }
     pierde = false;
     turno = "X";
-});
+    
+}
+);
 
